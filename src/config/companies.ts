@@ -1,0 +1,66 @@
+import type { Company } from '../types'
+
+export const companies: Company[] = [
+  {
+    id: 'academy',
+    name: 'Lagos Aviation Academy',
+    shortName: 'Academy',
+    accentColor: '#0E8C9B',
+    accentColorLight: '#E0F7FA',
+    accentColorDark: '#0A6B77',
+    logo: '/logos/lagos-aviation-academy.webp',
+    brandImage: '/brands/lagos-aviation-academy.jpg',
+  },
+  {
+    id: 'ota',
+    name: 'Finchglow Travels',
+    shortName: 'Travels',
+    accentColor: '#1B2A4A',
+    accentColorLight: '#E8EAF0',
+    accentColorDark: '#0F1A30',
+    logo: '/logos/finchglow-travels.webp',
+    brandImage: '/brands/finchglow-travels.jpg',
+  },
+  {
+    id: 'b2b',
+    name: 'Travel Den',
+    shortName: 'Travel Den',
+    accentColor: '#E67E22',
+    accentColorLight: '#FDF2E9',
+    accentColorDark: '#BA6518',
+    logo: '/logos/travel-den.webp',
+    brandImage: '/brands/travel-den.jpg',
+  },
+  {
+    id: 'tmc',
+    name: 'FCM Travel Management',
+    shortName: 'FCM',
+    accentColor: '#00C853',
+    accentColorLight: '#E8F5E9',
+    accentColorDark: '#009624',
+    logo: '/logos/fcm.webp',
+    brandImage: '/brands/fcm.jpg',
+  },
+  {
+    id: 'holidays',
+    name: 'Finchglow Holidays',
+    shortName: 'Holidays',
+    accentColor: '#F4A623',
+    accentColorLight: '#FEF9E7',
+    accentColorDark: '#C4841A',
+    logo: '/logos/finchglow-holidays.webp',
+    brandImage: '/brands/finchglow-holidays.jpg',
+  },
+  {
+    id: 'facilities',
+    name: 'FinchGlobal Nigeria',
+    shortName: 'FinchGlobal',
+    accentColor: '#2E7D32',
+    accentColorLight: '#E8F5E9',
+    accentColorDark: '#1B5E20',
+    logo: '/logos/finchglobal.webp',
+    brandImage: '/brands/finchglobal.jpg',
+  },
+]
+
+export const groupLogo = '/logos/finchglow-holdings.webp'
