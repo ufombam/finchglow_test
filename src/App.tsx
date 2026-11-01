@@ -9,6 +9,7 @@ import { AppLauncher } from './components/AppLauncher'
 import { AlertsFeed } from './components/AlertsFeed'
 import { AlertDetail } from './components/AlertDetail'
 import { UpcomingEvents } from './components/UpcomingEvents'
+import { BackgroundShapes } from './components/BackgroundShapes'
 import { useSearch } from './hooks/useSearch'
 import { useMockApi } from './hooks/useMockApi'
 import { mockApps, mockAlerts } from './data/mockData'
@@ -98,7 +99,8 @@ function Portal({ user, onSignOut }: { user: User; onSignOut: () => void }) {
   }, [allAlerts, selectedCompany])
 
   return (
-    <div className="flex min-h-screen bg-white text-gray-900 lg:h-screen lg:overflow-hidden dark:bg-gray-900 dark:text-gray-100">
+    <div className="flex min-h-screen bg-gray-50/80 text-gray-900 lg:h-screen lg:overflow-hidden dark:bg-gray-900 dark:text-gray-100">
+      <BackgroundShapes />
       <SkipLink />
       <Sidebar mobileOpen={sidebarOpen} onMobileClose={() => setSidebarOpen(false)} />
 
@@ -132,7 +134,7 @@ function Portal({ user, onSignOut }: { user: User; onSignOut: () => void }) {
           </div>
         </main>
 
-        <footer className="shrink-0 border-t border-gray-200 bg-white py-4 text-center text-xs text-gray-400 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-500">
+        <footer className="relative shrink-0 border-t border-gray-200 bg-white/80 py-4 text-center text-xs text-gray-400 dark:border-gray-700 dark:bg-gray-900/80 dark:text-gray-500">
           &copy; {new Date().getFullYear()} Finchglow Holdings. Group Staff Portal.
         </footer>
       </div>

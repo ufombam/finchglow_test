@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import { companies, groupLogo } from '../config/companies'
+import { SignInBackgroundShapes } from './BackgroundShapes'
 import type { Company } from '../types'
 
 interface SignInProps {
@@ -123,8 +124,9 @@ function BrandTile({ company, gridArea, index, onClick }: { company: Company; gr
 
 function BrandSelector({ onSelect }: { onSelect: (id: string) => void }) {
   return (
-    <div className="flex h-screen flex-col bg-white px-4 py-6 sm:px-6 sm:py-8">
-      <div className="mb-6 shrink-0 text-center">
+    <div className="relative flex h-screen flex-col bg-gray-50/80 px-4 py-6 sm:px-6 sm:py-8">
+      <SignInBackgroundShapes />
+      <div className="relative mb-6 shrink-0 text-center">
         <img
           src={groupLogo}
           alt="Finchglow Holdings"
@@ -139,7 +141,7 @@ function BrandSelector({ onSelect }: { onSelect: (id: string) => void }) {
       </div>
 
       {/* Desktop: staggered 3-col grid */}
-      <div className="mx-auto hidden w-full max-w-5xl flex-1 sm:grid sm:grid-cols-3 sm:grid-rows-[repeat(12,1fr)] sm:gap-3">
+      <div className="relative mx-auto hidden w-full max-w-5xl flex-1 sm:grid sm:grid-cols-3 sm:grid-rows-[repeat(12,1fr)] sm:gap-3">
         {tileLayout.map(({ companyId, gridArea }, i) => {
           const company = companies.find((c) => c.id === companyId)!
           return (
@@ -155,7 +157,7 @@ function BrandSelector({ onSelect }: { onSelect: (id: string) => void }) {
       </div>
 
       {/* Mobile: simple 2-col grid */}
-      <div className="grid flex-1 grid-cols-2 grid-rows-3 gap-2 sm:hidden">
+      <div className="relative grid flex-1 grid-cols-2 grid-rows-3 gap-2 sm:hidden">
         {tileLayout.map(({ companyId }, i) => {
           const company = companies.find((c) => c.id === companyId)!
           return (
@@ -212,19 +214,9 @@ function SignInForm({
   }
 
   return (
-    <div
-      className="flex min-h-screen items-center justify-center px-4"
-      style={{
-        backgroundColor: '#f8fafc',
-        backgroundImage: `
-          radial-gradient(circle, #e2e8f0 1px, transparent 1px),
-          radial-gradient(circle, #e2e8f0 1px, transparent 1px)
-        `,
-        backgroundSize: '40px 40px',
-        backgroundPosition: '0 0, 20px 20px',
-      }}
-    >
-      <div className="w-full max-w-md">
+    <div className="relative flex min-h-screen items-center justify-center bg-gray-50/80 px-4">
+      <SignInBackgroundShapes />
+      <div className="relative w-full max-w-md">
         <div className="mb-8 text-center">
           <img
             src={company.logo}
